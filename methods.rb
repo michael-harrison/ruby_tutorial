@@ -60,5 +60,15 @@ end
 alias say_it speak_it
 say_it "can you hear me"
 
+# splats
+
+# 1.9
+def splat_it (a, c, *b)
+  p b
+end
+
+splat_it(1,2,3,4,5)
+
+
 
 

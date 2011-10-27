@@ -1,3 +1,8 @@
+# There are 3 common conditional statements
+# if then else
+# unless
+# case
+
 # if then else
 dog_name = "rover"
 if dog_name == "snoopy" then puts "That's Charlie's dog" else puts "Don't know who's dog that is" end
@@ -55,13 +60,6 @@ puts "That's Charlie's dog" unless dog_name != "snoopy"
 dog_name = "snoopy"
 puts "That's Charlie's dog" unless dog_name != "snoopy"
 
-# ternary operator
-dog_name = "snoopy"
-puts dog_name == "snoopy" ? "That's Charlie's dog" : "Don't know who's dog that is"
-
-dog_name = "rover"
-puts dog_name == "snoopy" ? "That's Charlie's dog" : "Don't know who's dog that is"
-
 # Using the if statement return ability
 weather = "raining"
 
@@ -82,6 +80,13 @@ ground_feels =
     end
 
 puts ground_feels
+
+# ternary operator
+dog_name = "snoopy"
+puts dog_name == "snoopy" ? "That's Charlie's dog" : "Don't know who's dog that is"
+
+dog_name = "rover"
+puts dog_name == "snoopy" ? "That's Charlie's dog" : "Don't know who's dog that is"
 
 # case statement
 weather = "sunny"

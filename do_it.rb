@@ -1,21 +1,35 @@
-fruits = ["apple", "pear", "orange", "banana", "rock mellon"]
-puts "first with function: " + fruits.first()
-puts "first with index: " + fruits[0]
-puts "first with negative index: " + fruits[-5]
-puts "first two: "; puts fruits.first(2)
-puts "last: " + fruits.last
-puts "last two: "; puts fruits.last(2)
-puts "position 2: " + fruits.at(2)
+# break, next and redo
+# next
+cars = ["sedan", "station wagon", "4x4"]
+for car in cars
+  next if car == "station wagon"
+  puts car
+end
 
-# sections of arrays
-puts "the middle:"; puts fruits[2,4]
-puts "the middle with range:"; puts fruits[2..4]
-puts "the middle with slice & range:"; puts fruits.slice(2..4)
+# break
+cars = ["sedan", "station wagon", "4x4"]
+for car in cars
+  break if car == "station wagon"
+  puts car
+end
 
-# index of values
-puts "index of the orange: #{fruits.index('orange')}"
-puts "index of the orange with block: #{fruits.index{|fruit| fruit == 'orange' }}"
+# redo
+cars = ["sedan", "station wagon", "jalopy", "4x4"]
+cars_started = 0
+def start_car(car)
+  started = true
+  puts "starting #{car}"
+  if (car == "jalopy")
+    started = (rand(3) == 1)
+  end
 
-puts "is there an apple in this array: #{fruits.include?('apple')}"
-puts "is there an peach in this array: #{fruits.include?('peach')}"
+  started
+end
+
+for car in cars
+  redo if !start_car(car)
+  cars_started += 1
+end
+
+puts "started all cars"
 

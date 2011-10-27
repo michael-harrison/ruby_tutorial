@@ -74,3 +74,14 @@ puts "is there an peach in this array: #{fruits.include?('peach')}"
 # ---------------
 # Array Manipulation
 
+
+
+# ---------------
+# Changes in 1.9
+fruits = ["apple", "pear", "orange", "banana", "rock mellon"]
+fruits.choice # no longer exists
+fruits.sample(2) # replaces it
+fruits.uniq {|v| v =~ /g/}
+# NB: #product also now supports a block
+[1,2,3,4,5].inject(:+) # handy trick for 1.8.7 and 1.9.2/3
+

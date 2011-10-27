@@ -18,7 +18,13 @@ b = 22
 a,b = b,a
 puts "a:#{a}\n" + "b:#{b}\n"
 
+# default assignment
+my_string ||= "default string"
+puts my_string
+my_string ||= "another default string"
+puts my_string
 
+# operator abbreviations
 a = a + 1
 a += 1
 
