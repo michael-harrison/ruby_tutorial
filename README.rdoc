@@ -20,7 +20,7 @@ in which I expected to use them:
     blocks.rb
     methods.rb
     classes.rb
-
+
 == Ruby 1.9.3
 
 For those that are interest in more recent changes check out the ruby1.9.3.rb which highlights the differences
