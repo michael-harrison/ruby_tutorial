@@ -6,21 +6,20 @@ Contained within this repo are the supporting sample files I used when doing my 
 presentation at the Brisbane Ruby and Rails Brigade (http://www.meetup.com/brisbane-ruby-rails)
 meetup. Following is the order in which I expected to use them:
 
-    hello.rb
-    whitespace.rb
-    expressions.rb
-    conditions.rb
-    loops.rb
-    variables.rb
-    comments.rb
-    standard_types.rb
-    arrays.rb
-    hashes.rb
-    blocks.rb
-    methods.rb
-    classes.rb
+hello.rb
+whitespace.rb
+expressions.rb
+conditions.rb
+loops.rb
+variables.rb
+comments.rb
+standard_types.rb
+arrays.rb
+hashes.rb
+blocks.rb
+methods.rb
+classes.rb
 
-
 At this stage not all of the files are complete but I'm moving towards it.
 
 == Ruby 1.9.3
