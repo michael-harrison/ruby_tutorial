@@ -1,0 +1,25 @@
+= Ruby Tutorial
+== The Files
+Contained within this repo are the supporting sample files I used when doing my introduction to Ruby
+presentation at the Brisbane Ruby and Rails Brigade (http://www.meetup.com/brisbane-ruby-rails/)
+meetup. Following is the order in which I expected to use them:
+
+    hello.rb
+    whitespace.rb
+    expressions.rb
+    conditions.rb
+    loops.rb
+    variables.rb
+    comments.rb
+    standard_types.rb
+    arrays.rb
+    hashes.rb
+    blocks.rb
+    methods.rb
+    classes.rb
+
+At this stage not all of the files are complete but I'm moving towards it ;)
+
+== Ruby 1.9.3
+For those that are interest in more recent changes check out the ruby1.9.3.rb which highlights the differences
+between 1.9.2 and 1.9.3
