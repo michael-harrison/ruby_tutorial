@@ -3,7 +3,7 @@
 == The Files
 
 Contained within this repo are the supporting sample files I used when doing my introduction to Ruby
-presentation at the Brisbane Ruby and Rails Brigade (http://www.meetup.com/brisbane-ruby-rails/)
+presentation at the Brisbane Ruby and Rails Brigade (http://www.meetup.com/brisbane-ruby-rails)
 meetup. Following is the order in which I expected to use them:
 
     hello.rb
@@ -20,7 +20,8 @@ meetup. Following is the order in which I expected to use them:
     methods.rb
     classes.rb
 
-At this stage not all of the files are complete but I'm moving towards it ;)
+
+At this stage not all of the files are complete but I'm moving towards it.
 
 == Ruby 1.9.3
 
