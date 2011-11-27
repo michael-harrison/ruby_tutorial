@@ -25,22 +25,29 @@ class Schedule
     personal_schedule
   end
 
-  def display_personal_schedule personal_schedule
+  def show_personal_schedule personal_schedule
     personal_schedule.each do |schedule_entry|
       if schedule_entry.count > 1
         puts "-- clash --"
       end
 
       schedule_entry.each do |performance|
-        puts performance[:performer] +
-            " at " + performance[:stage] + " " +
-            performance[:start].strftime("%H:%M") + " to " +
-            performance[:end].strftime("%H:%M") + ""
+        puts performance[:start].strftime("%H:%M") + " to " +
+          performance[:end].strftime("%H:%M") + " " +
+          performance[:performer] + " at " + performance[:stage]
       end
 
       if schedule_entry.count > 1
         puts "----------"
       end
+    end
+  end
+
+  def show_performance_times
+    @festival.schedule.each do |performance|
+      puts performance[:start].strftime("%H:%M") + " to " +
+        performance[:end].strftime("%H:%M") + " " +
+        performance[:performer] + " at " + performance[:stage]
     end
   end
 
@@ -66,17 +73,25 @@ class Schedule
               if !@selections.include? performer
                  @selections << performer
               end
-              self.show_selected_performers
+              show_selected_performers
             else
               puts "Sorry that performer isn't on the bill (hit tab twice to see the performers)"
             end
 
           when "remove" || "rm"
             @selections.delete performer
-            self.show_selected_performers
+            show_selected_performers
 
           when "list" || "ls"
-            self.show_selected_performers
+            show_selected_performers
+
+          when "times"
+            show_performance_times
+
+
+          when "schedule"
+            schedule = personal_schedule_for @selections
+            show_personal_schedule schedule
 
           when "done"
             break
@@ -102,6 +117,8 @@ class Schedule
       "add <performer> - add a performer\n" +
       "remove <performer> - remove a performer\n" +
       "list - show the list of your selected performers\n" +
+      "schedule - show your schedule\n" +
+      "times - show the times for all performances\n" +
       "done - your done selecting your performers\n" +
       "help or h - this list"
 

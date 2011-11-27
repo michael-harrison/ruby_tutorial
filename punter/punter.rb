@@ -7,4 +7,5 @@ home_bake_schedule = Schedule.new home_bake
 home_bake_schedule.display_help
 performers = home_bake_schedule.choose_performers
 my_schedule = home_bake_schedule.personal_schedule_for performers
-home_bake_schedule.display_personal_schedule my_schedule
+puts "Your final schedule:"
+home_bake_schedule.show_personal_schedule my_schedule
