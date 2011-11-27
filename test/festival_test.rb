@@ -2,7 +2,7 @@ require 'test_helper'
 
 class FestivalTest < MiniTest::Unit::TestCase
   def setup
-    @festival = Festival.new "test/fixtures/home_bake_festival.csv", "test/fixtures/home_bake_walk_times.csv"
+    @festival = Festival.new "Home Bake", "test/fixtures/home_bake_festival.csv", "test/fixtures/home_bake_walk_times.csv"
   end
 
   def test_performers

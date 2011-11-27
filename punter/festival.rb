@@ -2,7 +2,8 @@ require 'readline'
 require 'csv'
 
 class Festival
-  def initialize schedule_csv, walk_times_csv
+  def initialize name, schedule_csv, walk_times_csv
+    @name = name
     self.load schedule_csv, walk_times_csv
   end
 
@@ -32,6 +33,10 @@ class Festival
 
   def walk_time_between location_a, location_b
     Integer(@walk_times[location_a + " to " + location_b])
+  end
+
+  def name
+    @name
   end
 
   def walk_times
