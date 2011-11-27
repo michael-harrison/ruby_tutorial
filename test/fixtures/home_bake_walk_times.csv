@@ -1,0 +1,13 @@
+route,travel time
+Main Stage to The Dome,15
+Main Stage to Big Top,5
+Main Stage to Hopetown Stage,15
+The Dome to Big Top,15
+The Dome to Hopetown Stage,5
+The Dome to Main Stage,15
+Big Top to The Dome,15
+Big Top to Main Stage,15
+Big Top to Hopetown Stage,5
+Hopetown Stage to Big Top,5
+Hopetown Stage to The Dome,15
+Hopetown Stage to Main Stage,15

@@ -15,15 +15,19 @@ class Schedule
       puts performance[:start].strftime("%H:%M") + " to " +
         performance[:end].strftime("%H:%M") + " " +
         performance[:performer] + " at " + performance[:stage] +
+        walk_time_between(last_performance, performance) +
         performances_clash?(last_performance, performance)
-
 
       last_performance = performance
     end
   end
 
   def performances_clash? previous, current
-     previous.nil? ? "" : (previous[:end] > current[:start] ? " (clashes with last performance)" : "" )
+    previous.nil? ? "" : (previous[:end] > current[:start] ? " (clashes with previous performance)" : "" )
+  end
+
+  def walk_time_between previous, current
+    previous.nil? ? "" : " with " + @festival.walk_time_between(previous[:stage], current[:stage]).to_s + " min walk "
   end
 
   def show_performance_times
@@ -71,7 +75,6 @@ class Schedule
           when "times"
             puts "Performance Times"
             show_performance_times
-
 
           when "schedule"
             puts "Your Schedule"

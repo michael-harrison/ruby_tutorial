@@ -2,11 +2,11 @@ require 'readline'
 require 'csv'
 
 class Festival
-  def initialize schedule_csv
-    load_schedule schedule_csv
+  def initialize schedule_csv, walk_times_csv
+    self.load schedule_csv, walk_times_csv
   end
 
-  def load_schedule schedule_csv
+  def load schedule_csv, walk_times_csv
     @schedule = CSV.read(schedule_csv, headers: true, header_converters: :symbol)
 
     # Create a list of performers based on the schedule
@@ -24,7 +24,18 @@ class Festival
 
     @schedule = @schedule.sort_by { |row| row[:start]}
     @performers.sort!
+
+    @walk_times = Hash[CSV.read(walk_times_csv, headers: true, header_converters: :symbol).to_a]
+
     @selections = []
+  end
+
+  def walk_time_between location_a, location_b
+    Integer(@walk_times[location_a + " to " + location_b])
+  end
+
+  def walk_times
+    @walk_times
   end
 
   def performers
