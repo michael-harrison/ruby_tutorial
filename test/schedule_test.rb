@@ -16,8 +16,8 @@ class ScheduleTest < MiniTest::Unit::TestCase
 
     # Check the schedule is as expected
     # NB: The following tests also assure that "The missing link" is not included in my schedule
-    assert_equal "Boy and Bear", my_schedule[0][0][:performer], "The first performer is incorrect"
-    assert_equal "Midnight Juggernauts", my_schedule[1][0][:performer], "The second performer is incorrect"
+    assert_equal "Boy and Bear", my_schedule[0][:performer], "The first performer is incorrect"
+    assert_equal "Midnight Juggernauts", my_schedule[1][:performer], "The second performer is incorrect"
   end
 
   def test_clashing_performances
@@ -26,11 +26,10 @@ class ScheduleTest < MiniTest::Unit::TestCase
     festival_schedule = Schedule.new @festival
     my_schedule = festival_schedule.personal_schedule_for my_favourite_performers
 
-    #assert_equal 1, my_schedule[0].count, "Incorrect number of acts for time frame"
-    #assert_equal 2, my_schedule[1].count, "Incorrect number of acts for time frame"
+    assert_equal 3, my_schedule.count, "Incorrect number of performers"
 
-    assert_equal "Boy and Bear", my_schedule[0][0][:performer], "Unexpected performer"
-    assert_equal "Midnight Juggernauts", my_schedule[1][0][:performer], "Unexpected performer"
-    assert_equal "Powderfinger", my_schedule[1][1][:performer], "Unexpected performer"
+    assert_equal "Boy and Bear", my_schedule[0][:performer], "Unexpected performer"
+    assert_equal "Midnight Juggernauts", my_schedule[1][:performer], "Unexpected performer"
+    assert_equal "Powderfinger", my_schedule[2][:performer], "Unexpected performer"
   end
 end

@@ -1,0 +1,13 @@
+stage from,stage to,travel time
+Main Stage,The Dome,15
+Main Stage,Big Top,5
+Main Stage,Hopetown,15
+The Dome,Big Top,15
+The Dome,Hopetown,5
+The Dome,Main Stage,15
+Big Top,The Dome,15
+Big Top,Main Stage,15
+Big Top,Hopetown,5
+Hopetown,Big Top,5
+Hopetown,The Dome,15
+Hopetown,Main Stage,15
